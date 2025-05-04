@@ -14,7 +14,7 @@ class AddPaymentAmountToOrdersTable extends Migration
     public function up(): void
     {
         Schema::table('orders', function (Blueprint $table) {
-            $table->decimal('payment_amount', 8, 2)->default(0)->after('payment_status');
+            $table->decimal('payment_amount', 8, 2)->default(0); // Removed ->after('payment_status')
         });
     }
 
