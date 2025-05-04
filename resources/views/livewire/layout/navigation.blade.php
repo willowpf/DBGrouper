@@ -23,11 +23,10 @@ new class extends Component
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-    <a href="https://www.flaticon.com/free-icons/shop" title="shop icons" target="_blank">
-        <img src="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.15752-9/483981246_1194595598722479_8004604248495517110_n.png?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeFNjgd0xHEURFiwtQ7bTDZREIExajpXeP8QgTFqOld4_8cGvE1Nomqa8ILlgqjwKO_TlE8ovmHnmAKuf3q0eTT1&_nc_ohc=lTCENb8vTGwQ7kNvgF53T5E&_nc_oc=AdhK-ueNIi92S3JR-OJiEKnMbnx7o6fDOMavmqN57U7xatJ9uC7FzvnvJ7PqZ7fBtIs&_nc_zt=23&_nc_ht=scontent.fceb2-2.fna&oh=03_Q7cD1wFkUtd9b4bd5rJs-fJVHAIlUzgS6X1oJVasQxkyX61yhg&oe=67FE4F97" alt="Shop Icon" class="block h-9 w-auto" />
-    </a>
-</div>
-
+                    <a href="https://www.flaticon.com/free-icons/shop" title="shop icons" target="_blank">
+                        <img src="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.15752-9/483981246_1194595598722479_8004604248495517110_n.png?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeFNjgd0xHEURFiwtQ7bTDZREIExajpXeP8QgTFqOld4_8cGvE1Nomqa8ILlgqjwKO_TlE8ovmHnmAKuf3q0eTT1&_nc_ohc=lTCENb8vTGwQ7kNvgF53T5E&_nc_oc=AdhK-ueNIi92S3JR-OJiEKnMbnx7o6fDOMavmqN57U7xatJ9uC7FzvnvJ7PqZ7fBtIs&_nc_zt=23&_nc_ht=scontent.fceb2-2.fna&oh=03_Q7cD1wFkUtd9b4bd5rJs-fJVHAIlUzgS6X1oJVasQxkyX61yhg&oe=67FE4F97" alt="Shop Icon" class="block h-9 w-auto" />
+                    </a>
+                </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex transition duration-300 hover:text-sky-400">
@@ -36,31 +35,30 @@ new class extends Component
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex transition duration-300 hover:text-sky-400">
-    <x-nav-link :href="route('icecreams.index')" :active="request()->routeIs('icecreams.index')">
-        {{ __('Ice Cream Maker') }}
+                    <x-nav-link :href="route('icecreams.index')" :active="request()->routeIs('icecreams.index')">
+                        {{ __('Ice Cream Maker') }}
+                    </x-nav-link>
+
+                    <!-- Reports NavLink -->
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex transition duration-300 hover:text-sky-400">
+    <x-nav-link :href="route('reports.index')" :active="request()->routeIs('reports.*')">
+        {{ __('Reports') }}
     </x-nav-link>
 </div>
 
-               
-
-
+                </div>
             </div>
-
-          
-            
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
-            <button id="darkModeToggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100">
-    <span id="darkModeIcon">🌙</span>
-</button>
-
+                <button id="darkModeToggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100">
+                    <span id="darkModeIcon">🌙</span>
+                </button>
 
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
                             <div x-data="{{ json_encode(['name' => auth()->user()->name]) }}" x-text="name" x-on:profile-updated.window="name = $event.detail.name"></div>
-
                             <div class="ms-1">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
