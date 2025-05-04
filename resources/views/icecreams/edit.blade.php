@@ -10,7 +10,6 @@
             @csrf
             @method('PUT')
 
-            <!-- Name Field -->
             <div>
                 <label class="block text-gray-700 dark:text-white">Name:</label>
                 <input type="text" name="name" value="{{ $iceCream->name }}" 
@@ -18,7 +17,6 @@
                               bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white">
             </div>
 
-            <!-- Size Dropdown -->
             <div>
                 <label class="block text-gray-700 dark:text-white">Size:</label>
                 <select name="size" 
@@ -30,7 +28,6 @@
                 </select>
             </div>
 
-            <!-- Flavor Dropdown -->
             <div>
     <label class="block text-gray-700 dark:text-white">Flavor:</label>
     <select name="flavor"
@@ -50,7 +47,6 @@
 </div>
 
 
-            <!-- Price Field -->
             <div>
                 <label class="block text-gray-700 dark:text-white">Price:</label>
                 <input type="number" name="price" step="0.01" value="{{ $iceCream->price }}" 
@@ -58,7 +54,6 @@
                               bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white">
             </div>
 
-            <!-- Submit Button -->
             <button type="submit"
                     class="w-full px-4 py-2 bg-primary text-white rounded-lg shadow-md 
                            hover:bg-sky-400 hover:scale-105 transition-transform duration-300">
@@ -67,3 +62,4 @@
         </form>
     </div>
 @endsection
+

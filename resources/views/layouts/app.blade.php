@@ -7,6 +7,8 @@
 
 
         <title>{{ config('app.name', 'UniqIce') }}</title>
+        <!-- css -->
+ 
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -40,22 +42,23 @@
                 </header>
             @endif
 
-            <!-- Page Content -->
+            
           <!-- Page Content -->
-          <main>
+          <main class="w-full">
     @if(!empty($slot))
         {{ $slot }}
     @else
         @yield('content')
     @endif
-</main>
-<!-- <main class="w-full">
+</main> 
+          <!-- <main>
     @if(!empty($slot))
         {{ $slot }}
     @else
         @yield('content')
     @endif
 </main> -->
+
 
 
 

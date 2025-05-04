@@ -45,6 +45,11 @@ new class extends Component
         {{ __('Reports') }}
     </x-nav-link>
 </div>
+<div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex transition duration-300 hover:text-sky-400">
+    <x-nav-link :href="route('icorder.order')" :active="request()->routeIs('icorder.order')">
+        {{ __('Order Ice Cream') }}
+    </x-nav-link>
+</div>
 
                 </div>
             </div>
@@ -54,6 +59,7 @@ new class extends Component
                 <button id="darkModeToggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100">
                     <span id="darkModeIcon">🌙</span>
                 </button>
+
 
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
@@ -66,6 +72,8 @@ new class extends Component
                             </div>
                         </button>
                     </x-slot>
+
+                    
 
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile')" wire:navigate>

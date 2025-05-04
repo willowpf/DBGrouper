@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class IceCream extends Model
 {
-    protected $fillable = ['name', 'size', 'price', 'flavor'];
+    protected $fillable = ['name', 'size', 'price', 'flavor',];
 
     public static function rules()
     {
@@ -15,6 +15,8 @@ class IceCream extends Model
             'size' => 'required|in:Small,Medium,Large',
             'price' => 'required|numeric|min:0',
             'flavor' => 'required|string|max:255',
+            
+            
         ];
     }
 
